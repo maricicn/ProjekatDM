@@ -17,15 +17,43 @@ namespace ProjekatDM
         public Form2()
         {
             InitializeComponent();
-            
+            if (File.Exists("schoolFile.csv"))
+            {
+                StreamReader schoolFile = new StreamReader("schoolFile.csv");
+                while (!schoolFile.EndOfStream)
+                {
+                    string line = schoolFile.ReadLine();
+                    string[] s = line.Split(",");
+                    cBSkola.Items.Add(s[0]);
+                }
+                schoolFile.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-             StreamWriter schoolFile = new StreamWriter("schoolFile.txt", append:true);
-             if (textBox1.Text != string.Empty) schoolFile.WriteLine(textBox1.Text);
-             else MessageBox.Show("Morate navesti ime skole");
-             schoolFile.Close();
+            StreamWriter schoolFile = new StreamWriter("schoolFile.csv", append: true);
+            if (textBox1.Text != string.Empty)
+            {
+                schoolFile.Write(textBox1.Text + ",");
+                cBSkola.Items.Add(textBox1.Text);
+                schoolFile.Write(comboBox1.Text);
+                schoolFile.WriteLine();
+            }
+            else MessageBox.Show("Morate navesti ime skole");
+            schoolFile.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            StreamWriter templateFile = new StreamWriter("templateFile.csv", append: true);
+            if (textBox2.Text != string.Empty)
+            {
+                templateFile.Write(textBox2.Text + "," + cBSkola.Text + "," + cBprvipredmet.Text + "," + cBdrugipredmet.Text + "," + cBtrecipredmet.Text);
+                templateFile.WriteLine();
+            }
+            else MessageBox.Show("Morate navesti ime sablona");
+            templateFile.Close();
         }
     }
 }

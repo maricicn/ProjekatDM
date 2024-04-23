@@ -32,20 +32,24 @@
             button1 = new Button();
             button3 = new Button();
             button2 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(282, 133);
+            label1.Location = new Point(283, 105);
             label1.Name = "label1";
             label1.Size = new Size(241, 45);
             label1.TabIndex = 0;
             label1.Text = "Državna matura";
+            label1.Click += label1_Click;
             // 
             // button1
             // 
+            button1.AutoSize = true;
             button1.BackColor = Color.Tan;
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Popup;
@@ -60,6 +64,7 @@
             // 
             // button3
             // 
+            button3.AutoSize = true;
             button3.BackColor = Color.Tan;
             button3.Cursor = Cursors.Hand;
             button3.FlatStyle = FlatStyle.Popup;
@@ -73,6 +78,7 @@
             // 
             // button2
             // 
+            button2.AutoSize = true;
             button2.BackColor = Color.Tan;
             button2.Cursor = Cursors.Hand;
             button2.FlatStyle = FlatStyle.Popup;
@@ -84,18 +90,32 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // button4
+            // 
+            button4.Location = new Point(624, 36);
+            button4.Name = "button4";
+            button4.Size = new Size(35, 38);
+            button4.TabIndex = 4;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.Bisque;
             ClientSize = new Size(800, 450);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
+            Resize += Form1_Resize;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -106,5 +126,6 @@
         private Button button1;
         private Button button3;
         private Button button2;
+        private Button button4;
     }
 }

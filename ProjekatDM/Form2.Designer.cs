@@ -38,13 +38,13 @@
             label5 = new Label();
             textBox2 = new TextBox();
             label6 = new Label();
-            comboBox2 = new ComboBox();
+            cBSkola = new ComboBox();
             label7 = new Label();
-            comboBox4 = new ComboBox();
+            cBtrecipredmet = new ComboBox();
             label8 = new Label();
-            comboBox3 = new ComboBox();
+            cBdrugipredmet = new ComboBox();
             label9 = new Label();
-            comboBox5 = new ComboBox();
+            cBprvipredmet = new ComboBox();
             label10 = new Label();
             button2 = new Button();
             SuspendLayout();
@@ -90,6 +90,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Opšti", "Stučni", "Umetnički" });
             comboBox1.Location = new Point(92, 182);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(166, 23);
@@ -136,13 +137,13 @@
             label6.TabIndex = 11;
             label6.Text = "Ime šablona";
             // 
-            // comboBox2
+            // cBSkola
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(447, 172);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(192, 23);
-            comboBox2.TabIndex = 13;
+            cBSkola.FormattingEnabled = true;
+            cBSkola.Location = new Point(447, 172);
+            cBSkola.Name = "cBSkola";
+            cBSkola.Size = new Size(192, 23);
+            cBSkola.TabIndex = 13;
             // 
             // label7
             // 
@@ -153,13 +154,13 @@
             label7.TabIndex = 14;
             label7.Text = "Škola";
             // 
-            // comboBox4
+            // cBtrecipredmet
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(447, 326);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(192, 23);
-            comboBox4.TabIndex = 21;
+            cBtrecipredmet.FormattingEnabled = true;
+            cBtrecipredmet.Location = new Point(447, 326);
+            cBtrecipredmet.Name = "cBtrecipredmet";
+            cBtrecipredmet.Size = new Size(192, 23);
+            cBtrecipredmet.TabIndex = 21;
             // 
             // label8
             // 
@@ -170,13 +171,13 @@
             label8.TabIndex = 20;
             label8.Text = "Treći predmet";
             // 
-            // comboBox3
+            // cBdrugipredmet
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(447, 270);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(192, 23);
-            comboBox3.TabIndex = 19;
+            cBdrugipredmet.FormattingEnabled = true;
+            cBdrugipredmet.Location = new Point(447, 270);
+            cBdrugipredmet.Name = "cBdrugipredmet";
+            cBdrugipredmet.Size = new Size(192, 23);
+            cBdrugipredmet.TabIndex = 19;
             // 
             // label9
             // 
@@ -187,13 +188,13 @@
             label9.TabIndex = 18;
             label9.Text = "Drugi predmet";
             // 
-            // comboBox5
+            // cBprvipredmet
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(447, 220);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(192, 23);
-            comboBox5.TabIndex = 17;
+            cBprvipredmet.FormattingEnabled = true;
+            cBprvipredmet.Location = new Point(447, 220);
+            cBprvipredmet.Name = "cBprvipredmet";
+            cBprvipredmet.Size = new Size(192, 23);
+            cBprvipredmet.TabIndex = 17;
             // 
             // label10
             // 
@@ -212,6 +213,7 @@
             button2.TabIndex = 22;
             button2.Text = "Dodaj šablon";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form2
             // 
@@ -219,14 +221,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button2);
-            Controls.Add(comboBox4);
+            Controls.Add(cBtrecipredmet);
             Controls.Add(label8);
-            Controls.Add(comboBox3);
+            Controls.Add(cBdrugipredmet);
             Controls.Add(label9);
-            Controls.Add(comboBox5);
+            Controls.Add(cBprvipredmet);
             Controls.Add(label10);
             Controls.Add(label7);
-            Controls.Add(comboBox2);
+            Controls.Add(cBSkola);
             Controls.Add(textBox2);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -255,13 +257,13 @@
         private Label label5;
         private TextBox textBox2;
         private Label label6;
-        private ComboBox comboBox2;
+        private ComboBox cBSkola;
         private Label label7;
-        public ComboBox comboBox4;
+        public ComboBox cBtrecipredmet;
         private Label label8;
-        public ComboBox comboBox3;
+        public ComboBox cBdrugipredmet;
         private Label label9;
-        public ComboBox comboBox5;
+        public ComboBox cBprvipredmet;
         private Label label10;
         private Button button2;
     }

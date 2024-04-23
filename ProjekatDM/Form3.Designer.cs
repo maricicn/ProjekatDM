@@ -44,6 +44,8 @@
             comboBox4 = new ComboBox();
             label8 = new Label();
             button1 = new Button();
+            cBTemplate = new ComboBox();
+            label9 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -182,11 +184,31 @@
             button1.Text = "Dodaj učenika";
             button1.UseVisualStyleBackColor = true;
             // 
+            // cBTemplate
+            // 
+            cBTemplate.FormattingEnabled = true;
+            cBTemplate.Location = new Point(71, 277);
+            cBTemplate.Name = "cBTemplate";
+            cBTemplate.Size = new Size(178, 23);
+            cBTemplate.TabIndex = 18;
+            cBTemplate.SelectedIndexChanged += cBTemplate_SelectedIndexChanged;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(71, 259);
+            label9.Name = "label9";
+            label9.Size = new Size(100, 15);
+            label9.TabIndex = 17;
+            label9.Text = "Odaberite šablon:";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(cBTemplate);
+            Controls.Add(label9);
             Controls.Add(button1);
             Controls.Add(comboBox4);
             Controls.Add(label8);
@@ -228,5 +250,7 @@
         public ComboBox comboBox4;
         private Label label8;
         private Button button1;
+        public ComboBox cBTemplate;
+        private Label label9;
     }
 }
