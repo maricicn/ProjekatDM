@@ -28,10 +28,6 @@ namespace ProjekatDM
             f3.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -42,6 +38,7 @@ namespace ProjekatDM
         {
             File.WriteAllText("schoolFile.csv", string.Empty);
             File.WriteAllText("templateFile.csv", string.Empty);
+            File.WriteAllText("studentFile.csv", string.Empty);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,18 +60,16 @@ namespace ProjekatDM
             int newWidth = (int)(r.Width * xRatio);
             int newHeight = (int)(r.Height * yRatio);
 
-            if(c.GetType() == typeof(Label))
+            /*if(c.GetType() == typeof(Label))
             {
                 float newSize = (float)Math.Sqrt((double)(this.Width * this.Height) / (r.Width * r.Height)); ;
                 c.Font = new Font(label1.Font.FontFamily, newSize);
                 c.Location = new Point(newX, newY);
 
-            }
-            else
-            {
-                c.Location = new Point(newX, newY);
-                c.Size = new Size(newWidth, newHeight);
-            }
+            }*/
+             c.Location = new Point(newX, newY);
+             c.Size = new Size(newWidth, newHeight);
+            
             
         }
 
