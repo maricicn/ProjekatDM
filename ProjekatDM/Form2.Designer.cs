@@ -53,6 +53,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ControlText;
             label1.Location = new Point(246, 9);
             label1.Name = "label1";
             label1.Size = new Size(301, 32);
@@ -229,6 +230,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.NavajoWhite;
             ClientSize = new Size(800, 450);
             Controls.Add(button2);
             Controls.Add(cBTreciPredmet);

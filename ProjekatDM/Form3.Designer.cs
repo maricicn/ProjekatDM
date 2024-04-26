@@ -72,7 +72,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(256, 30);
+            label1.Location = new Point(224, 23);
             label1.Name = "label1";
             label1.Size = new Size(257, 40);
             label1.TabIndex = 0;
@@ -81,7 +81,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(267, 101);
+            label2.Location = new Point(245, 101);
             label2.Name = "label2";
             label2.Size = new Size(35, 15);
             label2.TabIndex = 1;
@@ -90,7 +90,7 @@
             // cBSkola
             // 
             cBSkola.FormattingEnabled = true;
-            cBSkola.Location = new Point(267, 119);
+            cBSkola.Location = new Point(245, 119);
             cBSkola.Name = "cBSkola";
             cBSkola.Size = new Size(213, 23);
             cBSkola.TabIndex = 2;
@@ -131,7 +131,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(267, 171);
+            label5.Location = new Point(245, 171);
             label5.Name = "label5";
             label5.Size = new Size(57, 15);
             label5.TabIndex = 9;
@@ -139,7 +139,7 @@
             // 
             // cBOdeljenje
             // 
-            cBOdeljenje.Location = new Point(267, 189);
+            cBOdeljenje.Location = new Point(245, 189);
             cBOdeljenje.Name = "cBOdeljenje";
             cBOdeljenje.Size = new Size(213, 23);
             cBOdeljenje.TabIndex = 8;
@@ -149,7 +149,7 @@
             cBPrviPredmet.DropDownStyle = ComboBoxStyle.DropDownList;
             cBPrviPredmet.FormattingEnabled = true;
             cBPrviPredmet.Items.AddRange(new object[] { "Српски језик и књижевност", "Албански језик и књижевност", "Босански језик и књижевност", "Бугарски језик и књижевност", "Мађарски језик и књижевност", "Румунски језик и књижевност", "Русински језик и књижевност", "Словачки језик и књижевност", "Хрватски језик и књижевност" });
-            cBPrviPredmet.Location = new Point(550, 119);
+            cBPrviPredmet.Location = new Point(485, 119);
             cBPrviPredmet.Name = "cBPrviPredmet";
             cBPrviPredmet.Size = new Size(178, 23);
             cBPrviPredmet.TabIndex = 11;
@@ -158,7 +158,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(550, 101);
+            label6.Location = new Point(485, 101);
             label6.Name = "label6";
             label6.Size = new Size(75, 15);
             label6.TabIndex = 10;
@@ -169,7 +169,7 @@
             cBDrugiPredmet.DropDownStyle = ComboBoxStyle.Simple;
             cBDrugiPredmet.Enabled = false;
             cBDrugiPredmet.FormattingEnabled = true;
-            cBDrugiPredmet.Location = new Point(550, 187);
+            cBDrugiPredmet.Location = new Point(485, 187);
             cBDrugiPredmet.Name = "cBDrugiPredmet";
             cBDrugiPredmet.Size = new Size(178, 23);
             cBDrugiPredmet.TabIndex = 13;
@@ -178,7 +178,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(550, 169);
+            label7.Location = new Point(485, 169);
             label7.Name = "label7";
             label7.Size = new Size(84, 15);
             label7.TabIndex = 12;
@@ -189,7 +189,7 @@
             cBTreciPredmet.DropDownStyle = ComboBoxStyle.DropDownList;
             cBTreciPredmet.FormattingEnabled = true;
             cBTreciPredmet.Items.AddRange(new object[] { "Биологија", "Географија", "Енглески језик", "Историја", "Италијански језик", "Немачки језик", "Руски језик", "Српски као нематерњи језик", "Физика", "Француски језик", "Хемија", "Шпански језик" });
-            cBTreciPredmet.Location = new Point(550, 259);
+            cBTreciPredmet.Location = new Point(485, 259);
             cBTreciPredmet.Name = "cBTreciPredmet";
             cBTreciPredmet.Size = new Size(178, 23);
             cBTreciPredmet.TabIndex = 15;
@@ -197,7 +197,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(550, 241);
+            label8.Location = new Point(485, 241);
             label8.Name = "label8";
             label8.Size = new Size(79, 15);
             label8.TabIndex = 14;
@@ -205,7 +205,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(338, 313);
+            button1.Location = new Point(307, 351);
             button1.Name = "button1";
             button1.Size = new Size(110, 50);
             button1.TabIndex = 16;
@@ -236,7 +236,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(1060, 30);
+            label10.Location = new Point(794, 23);
             label10.Name = "label10";
             label10.Size = new Size(218, 40);
             label10.TabIndex = 19;
@@ -244,7 +244,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(969, 119);
+            textBox1.Location = new Point(703, 112);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(143, 23);
             textBox1.TabIndex = 20;
@@ -252,7 +252,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(969, 101);
+            label11.Location = new Point(703, 94);
             label11.Name = "label11";
             label11.Size = new Size(27, 15);
             label11.TabIndex = 21;
@@ -260,7 +260,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(969, 189);
+            textBox2.Location = new Point(703, 182);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(143, 23);
             textBox2.TabIndex = 22;
@@ -268,7 +268,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(969, 171);
+            label12.Location = new Point(703, 164);
             label12.Name = "label12";
             label12.Size = new Size(49, 15);
             label12.TabIndex = 23;
@@ -277,7 +277,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(969, 238);
+            label13.Location = new Point(703, 231);
             label13.Name = "label13";
             label13.Size = new Size(35, 15);
             label13.TabIndex = 24;
@@ -286,14 +286,14 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(969, 256);
+            comboBox1.Location = new Point(703, 249);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(213, 23);
             comboBox1.TabIndex = 25;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(969, 328);
+            textBox3.Location = new Point(703, 321);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(213, 23);
             textBox3.TabIndex = 26;
@@ -301,7 +301,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(969, 310);
+            label14.Location = new Point(703, 303);
             label14.Name = "label14";
             label14.Size = new Size(57, 15);
             label14.TabIndex = 27;
@@ -310,7 +310,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(1239, 101);
+            label17.Location = new Point(973, 94);
             label17.Name = "label17";
             label17.Size = new Size(75, 15);
             label17.TabIndex = 28;
@@ -319,7 +319,7 @@
             // comboBox4
             // 
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(1239, 119);
+            comboBox4.Location = new Point(973, 112);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(178, 23);
             comboBox4.TabIndex = 29;
@@ -327,7 +327,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(1239, 169);
+            label16.Location = new Point(973, 162);
             label16.Name = "label16";
             label16.Size = new Size(84, 15);
             label16.TabIndex = 30;
@@ -336,7 +336,7 @@
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(1239, 187);
+            comboBox3.Location = new Point(973, 180);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(178, 23);
             comboBox3.TabIndex = 31;
@@ -344,7 +344,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(1239, 241);
+            label15.Location = new Point(973, 234);
             label15.Name = "label15";
             label15.Size = new Size(79, 15);
             label15.TabIndex = 32;
@@ -353,7 +353,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(1239, 259);
+            comboBox2.Location = new Point(973, 252);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(178, 23);
             comboBox2.TabIndex = 33;
@@ -361,7 +361,7 @@
             // button2
             // 
             button2.Font = new Font("Lucida Bright", 20.25F);
-            button2.Location = new Point(1108, 391);
+            button2.Location = new Point(842, 384);
             button2.Name = "button2";
             button2.Size = new Size(60, 60);
             button2.TabIndex = 34;
@@ -372,7 +372,7 @@
             // button3
             // 
             button3.Font = new Font("Lucida Bright", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(1239, 391);
+            button3.Location = new Point(973, 384);
             button3.Name = "button3";
             button3.Size = new Size(60, 60);
             button3.TabIndex = 35;
@@ -383,7 +383,7 @@
             // button4
             // 
             button4.Font = new Font("Lucida Bright", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(1357, 391);
+            button4.Location = new Point(1091, 384);
             button4.Name = "button4";
             button4.Size = new Size(60, 60);
             button4.TabIndex = 36;
@@ -394,7 +394,7 @@
             // button5
             // 
             button5.Font = new Font("Lucida Bright", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.Location = new Point(969, 391);
+            button5.Location = new Point(703, 384);
             button5.Name = "button5";
             button5.Size = new Size(60, 60);
             button5.TabIndex = 37;
@@ -405,7 +405,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(1178, 504);
+            label18.Location = new Point(916, 490);
             label18.Name = "label18";
             label18.Size = new Size(44, 15);
             label18.TabIndex = 38;
@@ -415,7 +415,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1487, 756);
+            BackColor = Color.NavajoWhite;
+            ClientSize = new Size(1202, 584);
             Controls.Add(label18);
             Controls.Add(button5);
             Controls.Add(button4);
