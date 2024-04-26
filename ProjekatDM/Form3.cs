@@ -160,5 +160,19 @@ namespace ProjekatDM
             line = 1;
             label18.Text = line.ToString();
         }
+
+        private void cBPrviPredmet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBPrviPredmet.Text == "Српски језик и књижевност")
+            {
+                cBTreciPredmet.Items.RemoveAt(7);
+            }
+            else
+            {
+                if(!cBTreciPredmet.Items.Cast<string>().Contains("Српски као нематерњи језик"))
+                    cBTreciPredmet.Items.Insert(8, "Српски као нематерњи језик");
+                
+            }
+        }
     }
 }

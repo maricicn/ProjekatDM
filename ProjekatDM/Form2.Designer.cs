@@ -40,11 +40,11 @@
             label6 = new Label();
             cBSkola = new ComboBox();
             label7 = new Label();
-            cBtrecipredmet = new ComboBox();
+            cBTreciPredmet = new ComboBox();
             label8 = new Label();
-            cBdrugipredmet = new ComboBox();
+            cBDrugiPredmet = new ComboBox();
             label9 = new Label();
-            cBprvipredmet = new ComboBox();
+            cBPrviPredmet = new ComboBox();
             label10 = new Label();
             button2 = new Button();
             SuspendLayout();
@@ -89,6 +89,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Opšti", "Stučni", "Umetnički" });
             comboBox1.Location = new Point(92, 182);
@@ -139,6 +140,7 @@
             // 
             // cBSkola
             // 
+            cBSkola.DropDownStyle = ComboBoxStyle.DropDownList;
             cBSkola.FormattingEnabled = true;
             cBSkola.Location = new Point(447, 172);
             cBSkola.Name = "cBSkola";
@@ -154,13 +156,15 @@
             label7.TabIndex = 14;
             label7.Text = "Škola";
             // 
-            // cBtrecipredmet
+            // cBTreciPredmet
             // 
-            cBtrecipredmet.FormattingEnabled = true;
-            cBtrecipredmet.Location = new Point(447, 326);
-            cBtrecipredmet.Name = "cBtrecipredmet";
-            cBtrecipredmet.Size = new Size(192, 23);
-            cBtrecipredmet.TabIndex = 21;
+            cBTreciPredmet.DropDownStyle = ComboBoxStyle.DropDownList;
+            cBTreciPredmet.FormattingEnabled = true;
+            cBTreciPredmet.Items.AddRange(new object[] { "Биологија", "Географија", "Енглески језик", "Историја", "Италијански језик", "Немачки језик", "Руски језик", "Српски као нематерњи језик", "Физика", "Француски језик", "Хемија", "Шпански језик" });
+            cBTreciPredmet.Location = new Point(447, 326);
+            cBTreciPredmet.Name = "cBTreciPredmet";
+            cBTreciPredmet.Size = new Size(192, 23);
+            cBTreciPredmet.TabIndex = 21;
             // 
             // label8
             // 
@@ -171,13 +175,16 @@
             label8.TabIndex = 20;
             label8.Text = "Treći predmet";
             // 
-            // cBdrugipredmet
+            // cBDrugiPredmet
             // 
-            cBdrugipredmet.FormattingEnabled = true;
-            cBdrugipredmet.Location = new Point(447, 270);
-            cBdrugipredmet.Name = "cBdrugipredmet";
-            cBdrugipredmet.Size = new Size(192, 23);
-            cBdrugipredmet.TabIndex = 19;
+            cBDrugiPredmet.DropDownStyle = ComboBoxStyle.Simple;
+            cBDrugiPredmet.Enabled = false;
+            cBDrugiPredmet.FormattingEnabled = true;
+            cBDrugiPredmet.Location = new Point(447, 270);
+            cBDrugiPredmet.Name = "cBDrugiPredmet";
+            cBDrugiPredmet.Size = new Size(192, 23);
+            cBDrugiPredmet.TabIndex = 19;
+            cBDrugiPredmet.Text = "Математика";
             // 
             // label9
             // 
@@ -188,13 +195,16 @@
             label9.TabIndex = 18;
             label9.Text = "Drugi predmet";
             // 
-            // cBprvipredmet
+            // cBPrviPredmet
             // 
-            cBprvipredmet.FormattingEnabled = true;
-            cBprvipredmet.Location = new Point(447, 220);
-            cBprvipredmet.Name = "cBprvipredmet";
-            cBprvipredmet.Size = new Size(192, 23);
-            cBprvipredmet.TabIndex = 17;
+            cBPrviPredmet.DropDownStyle = ComboBoxStyle.DropDownList;
+            cBPrviPredmet.FormattingEnabled = true;
+            cBPrviPredmet.Items.AddRange(new object[] { "Српски језик и књижевност", "Албански језик и књижевност", "Босански језик и књижевност", "Бугарски језик и књижевност", "Мађарски језик и књижевност", "Румунски језик и књижевност", "Русински језик и књижевност", "Словачки језик и књижевност", "Хрватски језик и књижевност" });
+            cBPrviPredmet.Location = new Point(447, 220);
+            cBPrviPredmet.Name = "cBPrviPredmet";
+            cBPrviPredmet.Size = new Size(192, 23);
+            cBPrviPredmet.TabIndex = 17;
+            cBPrviPredmet.SelectedIndexChanged += cBprvipredmet_SelectedIndexChanged;
             // 
             // label10
             // 
@@ -221,11 +231,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button2);
-            Controls.Add(cBtrecipredmet);
+            Controls.Add(cBTreciPredmet);
             Controls.Add(label8);
-            Controls.Add(cBdrugipredmet);
+            Controls.Add(cBDrugiPredmet);
             Controls.Add(label9);
-            Controls.Add(cBprvipredmet);
+            Controls.Add(cBPrviPredmet);
             Controls.Add(label10);
             Controls.Add(label7);
             Controls.Add(cBSkola);
@@ -259,11 +269,11 @@
         private Label label6;
         private ComboBox cBSkola;
         private Label label7;
-        public ComboBox cBtrecipredmet;
+        public ComboBox cBTreciPredmet;
         private Label label8;
-        public ComboBox cBdrugipredmet;
+        public ComboBox cBDrugiPredmet;
         private Label label9;
-        public ComboBox cBprvipredmet;
+        public ComboBox cBPrviPredmet;
         private Label label10;
         private Button button2;
     }

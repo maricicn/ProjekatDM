@@ -28,10 +28,12 @@ namespace ProjekatDM
                 }
                 schoolFile.Close();
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             StreamWriter schoolFile = new StreamWriter("schoolFile.csv", append: true);
             if (textBox1.Text != string.Empty)
             {
@@ -49,11 +51,25 @@ namespace ProjekatDM
             StreamWriter templateFile = new StreamWriter("templateFile.csv", append: true);
             if (textBox2.Text != string.Empty)
             {
-                templateFile.Write(textBox2.Text + "," + cBSkola.Text + "," + cBprvipredmet.Text + "," + cBdrugipredmet.Text + "," + cBtrecipredmet.Text);
+                templateFile.Write(textBox2.Text + "," + cBSkola.Text + "," + cBPrviPredmet.Text + "," + cBDrugiPredmet.Text + "," + cBTreciPredmet.Text);
                 templateFile.WriteLine();
             }
             else MessageBox.Show("Morate navesti ime sablona");
             templateFile.Close();
+        }
+
+        private void cBprvipredmet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBPrviPredmet.Text == "Српски језик и књижевност")
+            {
+                cBTreciPredmet.Items.RemoveAt(7);
+            }
+            else
+            {
+                if (!cBTreciPredmet.Items.Cast<string>().Contains("Српски као нематерњи језик"))
+                    cBTreciPredmet.Items.Insert(8, "Српски као нематерњи језик");
+
+            }
         }
     }
 }

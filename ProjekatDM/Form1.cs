@@ -46,7 +46,7 @@ namespace ProjekatDM
             originalFormSize = new Rectangle(this.Location.X, this.Location.Y, this.Size.Width, this.Size.Height);
             button1OriginalRectangle = new Rectangle(button1.Location.X, button1.Location.Y, button1.Width, button1.Height);
             button2OriginalRectangle = new Rectangle(button2.Location.X, button2.Location.Y, button2.Width, button2.Height);
-            button3OriginalRectangle = new Rectangle(button3.Location.X, button3.Location.Y, button3.Width, button3.Height);
+            //button3OriginalRectangle = new Rectangle(button3.Location.X, button3.Location.Y, button3.Width, button3.Height);
             titleOriginalRectangle = new Rectangle(label1.Location.X, label1.Location.Y, label1.Width, label1.Height);
         }
         private void resizeControl(Rectangle r, Control c)
@@ -77,7 +77,7 @@ namespace ProjekatDM
         {
             resizeControl(button1OriginalRectangle, button1);
             resizeControl(button2OriginalRectangle, button2);
-            resizeControl(button3OriginalRectangle, button3);
+            //resizeControl(button3OriginalRectangle, button3);
             resizeControl(titleOriginalRectangle, label1);
             
         }

@@ -146,11 +146,14 @@
             // 
             // cBPrviPredmet
             // 
+            cBPrviPredmet.DropDownStyle = ComboBoxStyle.DropDownList;
             cBPrviPredmet.FormattingEnabled = true;
+            cBPrviPredmet.Items.AddRange(new object[] { "Српски језик и књижевност", "Албански језик и књижевност", "Босански језик и књижевност", "Бугарски језик и књижевност", "Мађарски језик и књижевност", "Румунски језик и књижевност", "Русински језик и књижевност", "Словачки језик и књижевност", "Хрватски језик и књижевност" });
             cBPrviPredmet.Location = new Point(550, 119);
             cBPrviPredmet.Name = "cBPrviPredmet";
             cBPrviPredmet.Size = new Size(178, 23);
             cBPrviPredmet.TabIndex = 11;
+            cBPrviPredmet.SelectedIndexChanged += cBPrviPredmet_SelectedIndexChanged;
             // 
             // label6
             // 
@@ -163,11 +166,14 @@
             // 
             // cBDrugiPredmet
             // 
+            cBDrugiPredmet.DropDownStyle = ComboBoxStyle.Simple;
+            cBDrugiPredmet.Enabled = false;
             cBDrugiPredmet.FormattingEnabled = true;
             cBDrugiPredmet.Location = new Point(550, 187);
             cBDrugiPredmet.Name = "cBDrugiPredmet";
             cBDrugiPredmet.Size = new Size(178, 23);
             cBDrugiPredmet.TabIndex = 13;
+            cBDrugiPredmet.Text = "Математика";
             // 
             // label7
             // 
@@ -180,7 +186,9 @@
             // 
             // cBTreciPredmet
             // 
+            cBTreciPredmet.DropDownStyle = ComboBoxStyle.DropDownList;
             cBTreciPredmet.FormattingEnabled = true;
+            cBTreciPredmet.Items.AddRange(new object[] { "Биологија", "Географија", "Енглески језик", "Историја", "Италијански језик", "Немачки језик", "Руски језик", "Српски као нематерњи језик", "Физика", "Француски језик", "Хемија", "Шпански језик" });
             cBTreciPredmet.Location = new Point(550, 259);
             cBTreciPredmet.Name = "cBTreciPredmet";
             cBTreciPredmet.Size = new Size(178, 23);
@@ -207,6 +215,7 @@
             // 
             // cBTemplate
             // 
+            cBTemplate.DropDownStyle = ComboBoxStyle.DropDownList;
             cBTemplate.FormattingEnabled = true;
             cBTemplate.Location = new Point(71, 277);
             cBTemplate.Name = "cBTemplate";
