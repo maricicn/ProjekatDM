@@ -127,6 +127,7 @@ namespace ProjekatDM
                 comboBox3.Text = s[5];
                 comboBox2.Text = s[6];
                 label18.Text = line.ToString();
+
             }
 
         }
