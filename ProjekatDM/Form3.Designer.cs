@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             label1 = new Label();
             label2 = new Label();
             cBSkola = new ComboBox();
@@ -65,7 +67,6 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
-            label18 = new Label();
             label19 = new Label();
             comboBox5 = new ComboBox();
             label20 = new Label();
@@ -77,10 +78,14 @@
             button7 = new Button();
             button6 = new Button();
             panelDodavanje = new Panel();
+            labelTimer = new Label();
+            pictureBox1 = new PictureBox();
             panel3 = new Panel();
             panel4 = new Panel();
+            timer1 = new System.Windows.Forms.Timer(components);
             panelPregled.SuspendLayout();
             panelDodavanje.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             SuspendLayout();
@@ -213,6 +218,7 @@
             cBTreciPredmet.Name = "cBTreciPredmet";
             cBTreciPredmet.Size = new Size(213, 23);
             cBTreciPredmet.TabIndex = 15;
+            cBTreciPredmet.SelectedIndexChanged += cBTreciPredmet_SelectedIndexChanged;
             // 
             // label8
             // 
@@ -384,6 +390,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(192, 23);
             comboBox2.TabIndex = 33;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // button2
             // 
@@ -428,15 +435,6 @@
             button5.Text = "<<";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new Point(236, 405);
-            label18.Name = "label18";
-            label18.Size = new Size(44, 15);
-            label18.TabIndex = 38;
-            label18.Text = "label18";
             // 
             // label19
             // 
@@ -510,7 +508,6 @@
             panelPregled.Controls.Add(button6);
             panelPregled.Controls.Add(label20);
             panelPregled.Controls.Add(comboBox6);
-            panelPregled.Controls.Add(label18);
             panelPregled.Controls.Add(button5);
             panelPregled.Controls.Add(button4);
             panelPregled.Controls.Add(button3);
@@ -537,7 +534,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(311, 377);
+            button7.Location = new Point(293, 377);
             button7.Name = "button7";
             button7.Size = new Size(131, 36);
             button7.TabIndex = 44;
@@ -547,7 +544,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(55, 377);
+            button6.Location = new Point(75, 377);
             button6.Name = "button6";
             button6.Size = new Size(131, 36);
             button6.TabIndex = 43;
@@ -557,6 +554,8 @@
             // 
             // panelDodavanje
             // 
+            panelDodavanje.Controls.Add(labelTimer);
+            panelDodavanje.Controls.Add(pictureBox1);
             panelDodavanje.Controls.Add(label19);
             panelDodavanje.Controls.Add(comboBox5);
             panelDodavanje.Controls.Add(cBTemplate);
@@ -581,6 +580,29 @@
             panelDodavanje.Size = new Size(710, 413);
             panelDodavanje.TabIndex = 47;
             // 
+            // labelTimer
+            // 
+            labelTimer.AutoSize = true;
+            labelTimer.BackColor = Color.White;
+            labelTimer.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelTimer.Location = new Point(237, 108);
+            labelTimer.Name = "labelTimer";
+            labelTimer.Size = new Size(33, 40);
+            labelTimer.TabIndex = 42;
+            labelTimer.Text = "5";
+            labelTimer.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(223, 57);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(212, 243);
+            pictureBox1.TabIndex = 41;
+            pictureBox1.TabStop = false;
+            pictureBox1.Visible = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // panel3
             // 
             panel3.BackColor = Color.Bisque;
@@ -602,6 +624,11 @@
             panel4.Size = new Size(861, 99);
             panel4.TabIndex = 49;
             // 
+            // timer1
+            // 
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -619,6 +646,7 @@
             panelPregled.PerformLayout();
             panelDodavanje.ResumeLayout(false);
             panelDodavanje.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
@@ -665,7 +693,6 @@
         private Button button3;
         private Button button4;
         private Button button5;
-        private Label label18;
         private Label label19;
         public ComboBox comboBox5;
         private Label label20;
@@ -679,5 +706,8 @@
         private Panel panel4;
         private Button button6;
         private Button button7;
+        private System.Windows.Forms.Timer timer1;
+        private Label labelTimer;
+        private PictureBox pictureBox1;
     }
 }

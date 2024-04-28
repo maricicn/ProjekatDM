@@ -147,6 +147,7 @@
             cBTreciPredmet.Name = "cBTreciPredmet";
             cBTreciPredmet.Size = new Size(250, 23);
             cBTreciPredmet.TabIndex = 21;
+            cBTreciPredmet.SelectedIndexChanged += cBTreciPredmet_SelectedIndexChanged;
             // 
             // label8
             // 
@@ -268,7 +269,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(69, 166);
+            button1.Location = new Point(79, 166);
             button1.Name = "button1";
             button1.Size = new Size(121, 48);
             button1.TabIndex = 3;
@@ -352,9 +353,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.NavajoWhite;
             ClientSize = new Size(800, 450);
+            Controls.Add(panelSablon);
             Controls.Add(panel4);
             Controls.Add(panel3);
-            Controls.Add(panelSablon);
             Controls.Add(panelSkola);
             Name = "Form2";
             Text = "Form2";

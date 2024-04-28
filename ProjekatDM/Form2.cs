@@ -309,7 +309,16 @@ namespace ProjekatDM
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void cBTreciPredmet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cBTreciPredmet.Text == "Srpski kao nematernji jezik" && cBPrviPredmet.Text == "Srpski jezik i književnost")
+            {
+                cBTreciPredmet.Text = string.Empty;
+                cBTreciPredmet.Items.Remove("Srpski kao nematernji jezik");
+            }
         }
     }
 }

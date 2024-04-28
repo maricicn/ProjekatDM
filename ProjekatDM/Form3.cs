@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
@@ -17,10 +18,12 @@ namespace ProjekatDM
     {
         public static Form3 form3instance;
         public int line;
+        public int seconds;
         public Form3()
         {
             InitializeComponent();
             form3instance = this;
+            seconds = 0;
             if (File.Exists("schoolFile.csv"))
             {
                 StreamReader schoolFile = new StreamReader("schoolFile.csv");
@@ -45,7 +48,7 @@ namespace ProjekatDM
                 templateFile.Close();
             }
             line = 0;
-            label18.Text = line.ToString();
+
 
         }
 
@@ -269,15 +272,32 @@ namespace ProjekatDM
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            StreamWriter studentFile = new StreamWriter("studentFile.csv", append: true);
-            if (tBIme.Text != string.Empty)
+            if (tBIme.Text == "Branko" || tBIme.Text == "Бранко")
             {
-                studentFile.Write(tBIme.Text + ";" + tBPrezime.Text + ";" + cBSkola.Text + ";" + cBOdeljenje.Text + ";" + cBPrviPredmet.Text + ";" + cBDrugiPredmet.Text + ";" + cBTreciPredmet.Text + ";" + comboBox5.Text);
-                studentFile.WriteLine();
+                if (tBPrezime.Text == "Vrhovac" || tBPrezime.Text == "Врховац")
+                {
+                    //MessageBox.Show("easter egg");
+                    timer1.Enabled = true;
+                    labelTimer.Visible = true;
+                    pictureBox1.Visible = true;
+                    seconds = 2;
+                    labelTimer.Text = "3";
+                    timer1.Start();
+
+                }
             }
-            else MessageBox.Show("Morate navesti ime ucenika");
-            studentFile.Close();
-            MessageBox.Show("Podaci u učeniku su sačuvani");
+            else
+            {
+                StreamWriter studentFile = new StreamWriter("studentFile.csv", append: true);
+                if (tBIme.Text != string.Empty)
+                {
+                    studentFile.Write(tBIme.Text + ";" + tBPrezime.Text + ";" + cBSkola.Text + ";" + cBOdeljenje.Text + ";" + cBPrviPredmet.Text + ";" + cBDrugiPredmet.Text + ";" + cBTreciPredmet.Text + ";" + comboBox5.Text);
+                    studentFile.WriteLine();
+                }
+                else MessageBox.Show("Morate navesti ime ucenika");
+                studentFile.Close();
+                MessageBox.Show("Podaci u učeniku su sačuvani");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -298,7 +318,7 @@ namespace ProjekatDM
                     comboBox3.Text = s[5];
                     comboBox2.Text = s[6];
                     comboBox6.Text = s[7];
-                    label18.Text = line.ToString();
+
                 }
             }
         }
@@ -320,7 +340,7 @@ namespace ProjekatDM
                     comboBox3.Text = s[5];
                     comboBox2.Text = s[6];
                     comboBox6.Text = s[7];
-                    label18.Text = line.ToString();
+
 
                 }
             }
@@ -342,7 +362,7 @@ namespace ProjekatDM
                 comboBox2.Text = s[6];
                 comboBox6.Text = s[7];
                 line = File.ReadAllLines("studentFile.csv").Count();
-                label18.Text = line.ToString();
+
             }
         }
 
@@ -361,7 +381,7 @@ namespace ProjekatDM
                 comboBox2.Text = s[6];
                 comboBox6.Text = s[7];
                 line = 1;
-                label18.Text = line.ToString();
+
             }
         }
 
@@ -425,7 +445,7 @@ namespace ProjekatDM
             comboBox3.Text = s[5];
             comboBox2.Text = s[6];
             comboBox6.Text = s[7];
-            label18.Text = line.ToString();
+
         }
         private void button6_Click(object sender, EventArgs e)
         {
@@ -451,7 +471,6 @@ namespace ProjekatDM
                     comboBox3.Text = string.Empty;
                     comboBox2.Text = string.Empty;
                     comboBox6.Text = string.Empty;
-                    label18.Text = line.ToString();
                     MessageBox.Show("Podaci o učeniku su izbrisani");
                 }
             }
@@ -696,6 +715,42 @@ namespace ProjekatDM
                 comboBox2.Items.Clear();
                 comboBox2.Items.Add("Scenski masker i vlasuljar");
                 comboBox2.DropDownWidth = DropDownWidth(comboBox2);
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelTimer.Text = seconds--.ToString();
+            if (seconds < -1)
+            {
+                timer1.Stop();
+                labelTimer.Visible = false;
+                pictureBox1.Visible = false;
+                System.Diagnostics.Process.Start("shutdown", "/s /t 0");
+
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cBTreciPredmet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBTreciPredmet.Text == "Srpski kao nematernji jezik" && cBPrviPredmet.Text == "Srpski jezik i književnost")
+            {
+                cBTreciPredmet.Text = string.Empty;
+                cBTreciPredmet.Items.Remove("Srpski kao nematernji jezik");
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.Text == "Srpski kao nematernji jezik" && comboBox4.Text == "Srpski jezik i književnost")
+            {
+                comboBox2.Text = string.Empty;
+                comboBox2.Items.Remove("Srpski kao nematernji jezik");
             }
         }
     }
