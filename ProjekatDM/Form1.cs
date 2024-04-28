@@ -7,7 +7,7 @@ namespace ProjekatDM
     {
         private Rectangle button1OriginalRectangle;
         private Rectangle button2OriginalRectangle;
-        private Rectangle button3OriginalRectangle;
+        //private Rectangle button3OriginalRectangle;
         private Rectangle titleOriginalRectangle;
         private Rectangle originalFormSize;
         public Form1()

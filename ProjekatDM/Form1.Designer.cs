@@ -38,10 +38,10 @@
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(283, 105);
+            label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(259, 113);
             label1.Name = "label1";
-            label1.Size = new Size(241, 45);
+            label1.Size = new Size(282, 50);
             label1.TabIndex = 0;
             label1.Text = "Državna matura";
             label1.Click += label1_Click;
@@ -49,13 +49,13 @@
             // button1
             // 
             button1.AutoSize = true;
-            button1.BackColor = Color.Tan;
+            button1.BackColor = Color.DarkOrange;
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(228, 207);
+            button1.Location = new Point(207, 201);
             button1.Name = "button1";
-            button1.Size = new Size(140, 75);
+            button1.Size = new Size(151, 86);
             button1.TabIndex = 1;
             button1.Text = "Unos škole / šablona";
             button1.UseVisualStyleBackColor = false;
@@ -64,12 +64,12 @@
             // button2
             // 
             button2.AutoSize = true;
-            button2.BackColor = Color.Tan;
+            button2.BackColor = Color.DarkOrange;
             button2.Cursor = Cursors.Hand;
             button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(432, 207);
+            button2.Location = new Point(419, 201);
             button2.Name = "button2";
-            button2.Size = new Size(140, 75);
+            button2.Size = new Size(151, 86);
             button2.TabIndex = 2;
             button2.Text = "Unos učenika";
             button2.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = Color.Bisque;
+            BackColor = Color.NavajoWhite;
             ClientSize = new Size(800, 450);
             Controls.Add(button4);
             Controls.Add(button2);
